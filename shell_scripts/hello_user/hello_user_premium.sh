@@ -10,7 +10,7 @@
 
 
 # Necessary variables
-export MAXIMUM_ARGUMENTS=1
+MAXIMUM_ARGUMENTS=1
 
 # Check if more than the maximum number of arguments have been 
 # supplied at the command line. If yes, print an error message 
@@ -30,9 +30,9 @@ fi
 # currently logged in user.
 if [ $# -eq $MAXIMUM_ARGUMENTS ]
 then
-  export USERNAME="$1"
+  USERNAME="$1"
 else
-  export USERNAME="$USER"
+  USERNAME="$USER"
 fi
 
 # Print to the screen

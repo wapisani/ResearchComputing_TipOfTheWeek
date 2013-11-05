@@ -9,7 +9,7 @@
 
 
 # Necessary variables
-export EXPECTED_ARGUMENTS=1
+EXPECTED_ARGUMENTS=1
 
 # Check if the username is supplied at the command line.
 # If not, print an error message (help text) and exit.
@@ -23,7 +23,7 @@ then
 fi
 
 # Variables
-export USERNAME="$1"
+USERNAME="$1"
 
 # Print to the screen
 echo
