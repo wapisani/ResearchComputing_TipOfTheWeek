@@ -6,6 +6,7 @@
 # Usage:
 # login_counter.sh
 
+
 # Necessary variables
 EXPECTED_ARGUMENTS=0
 
