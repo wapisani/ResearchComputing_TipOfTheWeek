@@ -1,8 +1,7 @@
 #! /bin/bash
 #
-# BASH script to count the number of times any given
-# word appears in a specified file and print the
-# results to the screen.
+# BASH script to count the number of occurances of each word
+# in a specified file and print the results to the screen.
 # 
 # If option -h is specified with any other option, -h takes 
 # precedence over all other options.
@@ -24,7 +23,7 @@ show_help() {
   echo "         `basename $0` -F FILENAME"
   echo
   echo "    e.g. `basename $0`"
-  echo "         `basename $0` -F shakespeare.txt"
+  echo "         `basename $0` -F 44362-0.txt"
   echo
   exit
 }
@@ -87,12 +86,14 @@ then
   exit
 fi
 
-# Check if the file has any useful information in spite of non-zero size
+# Check if the file has any useful information in spite of
+# non-zero size
 NON_BLANK_LINES=`sed '/^$/d' $FILENAME | wc -l`
 if [ "$NON_BLANK_LINES" -eq 0 ]
 then
   echo
-  echo "  $FILENAME exists and is not empty but has no useful information."
+  echo "  $FILENAME exists and is not empty but "
+  echo "  has no useful information."
   echo "  Exiting."
   echo
   exit
@@ -111,5 +112,6 @@ egrep -o "\b[[:alnum:]]+\b" $FILENAME | \
   uniq -c                             | \
   sort -n                             | \
   awk '{ printf("    %5d  %-20s   %4d\n", NR, $2, $1); }'
+
 echo "  --------------------------------------"
 echo
