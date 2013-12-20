@@ -21,5 +21,5 @@ HPC Research Scientist, ITS
 Adj. Assistant Professor, Physics/ECE     
 Michigan Technological University    
 
-http://it.mtu.edu/   
+http://it.mtu.edu   
 
