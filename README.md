@@ -4,11 +4,7 @@ Disclaimer
 The scripts, tools, utilities, procedures, etc., included in this repository were written by and have been tested at Michigan Technological University to help our researchers. These are published, often periodically, as Tip of The Week at   
 
   http://superior.research.mtu.edu/tip-of-the-week/    
-  http://athena.research.mtu.edu/tip-of-the-week/    
-  http://ivs.research.mtu.edu/tip-of-the-week/    
-  http://rama.research.mtu.edu/tip-of-the-week/    
-  http://statscluster.research.mtu.edu/tip-of-the-week/    
-  http://wigner.research.mtu.edu/tip-of-the-week/    
+  http://portage.research.mtu.edu/tip-of-the-week/    
 
 Red Hat Enterprise Linux 6.x is the choice OS for work stations, while Rocks Cluster distribution (6.1.1 with CentOS 6.3) is the choice OS for HPC clusters. As has been a common practice for several years now, a full version of operating system was installed in work stations as well as HPC clusters used to test these scripts, tools, utilities, procedures, etc.,.  
 
