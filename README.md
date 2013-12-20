@@ -18,7 +18,7 @@ Author
 ===
 Gowtham, PhD    
 HPC Research Scientist, ITS    
-Adj. Assistant Professor, Physics/ECE     
+Adj. Asst. Professor, Physics/ECE     
 Michigan Technological University    
 
 http://it.mtu.edu   
