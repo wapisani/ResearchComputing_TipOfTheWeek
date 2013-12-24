@@ -68,6 +68,6 @@ then
   esac
 else
   echo
-  echo "  '$1' is not a regular file"
+  echo "  '$COMPRESSED_FILENAME' is not a regular file"
   echo
 fi
