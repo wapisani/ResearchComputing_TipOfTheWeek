@@ -4,7 +4,7 @@
 # compresed files/folders based on the filename extension.
 # 
 # Usage:
-# ./smart_extract.sh COMPRESSED_FILENAME
+# smart_extract.sh COMPRESSED_FILENAME
 
 
 # Necessary variables

@@ -1,11 +1,11 @@
 #! /bin/bash
 #
-# BASH script to print "Hello, USERNAME!" to the screen, along 
-# with the hostname and current date/time iff a username is
-# supplied at the command line.
+# BASH script to print "Hello, USERNAME!" to the screen, 
+# along with the hostname and current date/time iff a 
+# username is supplied at the command line.
 # 
 # Usage:
-# ./hello_user_special.sh USERNAME
+# hello_user_special.sh USERNAME
 
 
 # Necessary variables

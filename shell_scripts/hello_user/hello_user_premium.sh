@@ -1,20 +1,20 @@
 #! /bin/bash
 #
-# BASH script to print "Hello, USERNAME!" to the screen, along 
-# with the hostname and current date/time. USERNAME is the 
-# username supplied at the command line; if not supplied, use
-# the currently logged in user's username.
+# BASH script to print "Hello, USERNAME!" to the screen, 
+# along with the hostname and current date/time. USERNAME
+# is the username supplied at the command line; if not 
+# supplied, use the currently logged in user's username.
 # 
 # Usage:
-# ./hello_user_premium.sh [USERNAME]
+# hello_user_premium.sh [USERNAME]
 
 
 # Necessary variables
 MAXIMUM_ARGUMENTS=1
 
-# Check if more than the maximum number of arguments have been 
-# supplied at the command line. If yes, print an error message 
-# (help text) and exit.
+# Check if more than the maximum number of arguments have 
+# been supplied at the command line. If yes, print an 
+# error message (help text) and exit.
 if [ $# -gt $MAXIMUM_ARGUMENTS ]
 then
   echo
@@ -25,9 +25,9 @@ then
   exit
 fi
 
-# Check if the username is supplied at the command line. If yes, 
-# set USERNAME to supplied value; if not, set it to username of 
-# currently logged in user.
+# Check if the username is supplied at the command line.
+# If yes, set USERNAME to supplied value; if not, set it
+# to username of currently logged in user.
 if [ $# -eq $MAXIMUM_ARGUMENTS ]
 then
   USERNAME="$1"

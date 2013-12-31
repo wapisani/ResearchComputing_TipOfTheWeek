@@ -7,6 +7,7 @@
 # Usage: 
 # sum_numbers.sh BEGIN [STEP] END
 
+
 # Necessary variables
 MINIMUM_ARGUMENTS=2
 MAXIMUM_ARGUMENTS=3

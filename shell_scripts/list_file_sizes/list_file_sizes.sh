@@ -89,6 +89,7 @@ echo "  Location  : $LOCATION"
 echo "  Min. size : $SIZE MB"
 echo
 find $LOCATION -name '*' -size +${SIZE_IN_KB}k -ls | \
-  awk --assign=MB="$MEGABYTE" '{ filesize+=$7; printf(" %5d MB  %s\n", $7/MB, $11); }' | \
+  awk --assign=MB="$MEGABYTE" \
+  '{ filesize+=$7; printf(" %5d MB  %s\n", $7/MB, $11); }' | \
   sort -nr
 echo
