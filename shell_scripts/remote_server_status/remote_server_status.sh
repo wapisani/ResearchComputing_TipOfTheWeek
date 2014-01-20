@@ -35,7 +35,7 @@ PING_REQUESTS=`ping -c $PING_COUNT -q $SERVER | \
                  grep "packet loss"`
 
 # Count the number of pings (KNOCK_KNOCK), number of responses (WHO_IS_THERE) 
-# and create a state for the network and/or the remote server
+# and create a status for the network and/or the remote server
 SENT=`echo $PING_REQUESTS | \
         awk -F ' ' '{ print $1 }'`
 RECD=`echo $PING_REQUESTS | \
