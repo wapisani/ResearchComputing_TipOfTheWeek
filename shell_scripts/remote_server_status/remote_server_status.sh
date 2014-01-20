@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# BASH script to ping a given remote server identified by an IP address]. 
+# BASH script to ping a given remote server identified by an IP address. 
 # Applications include using this as a preliminary test of 'remote server 
 # being alive' before attempting to transfer files (e.g., data backup via 
 # cron jobs, etc.). 
