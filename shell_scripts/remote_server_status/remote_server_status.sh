@@ -46,19 +46,19 @@ then
   STATUS="Excellent"
 else
   # 75% packets received
-  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (3/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "scale=0; $KNOCK_KNOCK * (3/4)" | bc` ]
   then
     STATUS="Average"
   fi
 
   # 50% packets received
-  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (2/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "scale=0; $KNOCK_KNOCK * (2/4)" | bc` ]
   then
     STATUS="Poor"
   fi
 
   # 25% packets received
-  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (1/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "scale=0; $KNOCK_KNOCK * (1/4)" | bc` ]
   then
     STATUS="Very poor"
   fi
