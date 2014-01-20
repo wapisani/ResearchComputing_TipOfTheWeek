@@ -27,7 +27,7 @@ fi
 
 # Variables
 SERVER="$1"
-PING_COUNT=2
+PING_COUNT=20
 
 # Ping the remote server N times quietly
 #   Select the line that contains "packet loss"
@@ -36,35 +36,35 @@ PING_REQUESTS=`ping -c $PING_COUNT -q $SERVER | \
 
 # Count the number of pings (KNOCK_KNOCK), number of responses (WHO_IS_THERE) 
 # and create a status for the network and/or the remote server
-SENT=`echo $PING_REQUESTS | \
+KNOCK_KNOCK=`echo $PING_REQUESTS | \
         awk -F ' ' '{ print $1 }'`
-RECD=`echo $PING_REQUESTS | \
+WHO_IS_THERE=`echo $PING_REQUESTS | \
         awk -F ' ' '{ print $4 }'`
 
-if [ $RECD -eq $SENT ]
+if [ $WHO_IS_THERE -eq $KNOCK_KNOCK ]
 then
   STATUS="Excellent"
 else
   # 75% packets received
-  if [ $RECD -le `echo "$SENT * (3/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (3/4)" | bc` ]
   then
     STATUS="Average"
   fi
 
   # 50% packets received
-  if [ $RECD -le `echo "$SENT * (2/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (2/4)" | bc` ]
   then
     STATUS="Poor"
   fi
 
   # 25% packets received
-  if [ $RECD -le `echo "$SENT * (1/4)" | bc` ]
+  if [ $WHO_IS_THERE -le `echo "$KNOCK_KNOCK * (1/4)" | bc` ]
   then
     STATUS="Very poor"
   fi
 
   # 0 packets received
-  if [ $RECD -eq 0 ]
+  if [ $WHO_IS_THERE -eq 0 ]
   then
     STATUS="Down"
   fi
@@ -76,6 +76,6 @@ echo "  ---------------------------------------------------"
 echo "                       -- Ping --    Server/Network"
 echo "    Remote server      Sent  Recd        status"
 echo "  ---------------------------------------------------"
-printf "    %-15s    %02d    %02d      %s\n" "$SERVER" "$SENT" "$RECD" "$STATUS"
+printf "    %-15s    %02d    %02d      %s\n" "$SERVER" "$KNOCK_KNOCK" "$WHO_IS_THERE" "$STATUS"
 echo "  ---------------------------------------------------"
 echo
