@@ -72,10 +72,10 @@ fi
 
 # Print the information
 echo
-echo "  -----------------------------------------------"
-echo "                     -- Ping --  Server/Network"
-echo "    Remote server    Sent  Recd      status"
-echo "  -----------------------------------------------"
-printf "    %-15s  %02d    %02d    %s\n" "$SERVER" "$SENT" "$RECD" "$STATUS"
-echo "  -----------------------------------------------"
+echo "  ---------------------------------------------------"
+echo "                       -- Ping --    Server/Network"
+echo "    Remote server      Sent  Recd        status"
+echo "  ---------------------------------------------------"
+printf "    %-15s    %02d    %02d      %s\n" "$SERVER" "$SENT" "$RECD" "$STATUS"
+echo "  ---------------------------------------------------"
 echo
