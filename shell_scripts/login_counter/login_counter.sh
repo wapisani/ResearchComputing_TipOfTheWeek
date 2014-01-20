@@ -1,7 +1,7 @@
 #! /bin/bash
 #
-# BASH script to count and display usernames in descending 
-# order of the number of successful login attempts.
+# BASH script to count and display usernames in descending order of the number 
+# of successful login attempts.
 #
 # Usage:
 # login_counter.sh
@@ -10,8 +10,8 @@
 # Necessary variables
 EXPECTED_ARGUMENTS=0
 
-# Check if there is any argument supplied at the command line. 
-# If yes, print an error message (help text) and exit.
+# Check if there is any argument supplied at the command line. If yes, print 
+# an error message (help text) and exit
 if [ $# -ne $EXPECTED_ARGUMENTS ]
 then
   echo

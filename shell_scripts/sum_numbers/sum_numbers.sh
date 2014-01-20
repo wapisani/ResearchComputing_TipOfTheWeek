@@ -1,8 +1,7 @@
 #! /bin/bash
 #
-# BASH script to add a series of given numbers and print 
-# the sum to the screen. Works for integers and 
-# non-integers alike.
+# BASH script to add a series of given numbers and print the sum. Works for 
+# integers and non-integers alike.
 #
 # Usage: 
 # sum_numbers.sh BEGIN [STEP] END
@@ -12,9 +11,9 @@
 MINIMUM_ARGUMENTS=2
 MAXIMUM_ARGUMENTS=3
 
-# Check if the user has supplied less than the minimum OR
-# more than the maximum number of arguments at the command 
-# line. If yes, print an error message (help text) and exit.
+# Check if the user has supplied less than the minimum OR more than the 
+# maximum number of arguments at the command line. If yes, print an error 
+# message (help text) and exit
 if [ $# -lt $MINIMUM_ARGUMENTS ] || [ $# -gt $MAXIMUM_ARGUMENTS ]
 then
   echo

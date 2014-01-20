@@ -1,7 +1,7 @@
 #! /bin/bash
 #
-# BASH script to automagically uncompress different kinds of
-# compresed files/folders based on the filename extension.
+# BASH script to automagically uncompress different kinds of compresed 
+# files/folders based on the filename extension.
 # 
 # Usage:
 # smart_extract.sh COMPRESSED_FILENAME
@@ -10,8 +10,8 @@
 # Necessary variables
 EXPECTED_ARGUMENTS=1
 
-# Check if a compressed filename is supplied at the command 
-# line. If not, print an error message (help text) and exit
+# Check if a compressed filename is supplied at the command line. If not, 
+# print an error message (help text) and exit
 if [ $# -ne $EXPECTED_ARGUMENTS ]
 then
   echo

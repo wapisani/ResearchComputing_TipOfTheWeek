@@ -1,19 +1,19 @@
 #! /bin/bash
 #
-# BASH script to count the number of occurances of each word
-# in a specified file and print the results to the screen.
+# BASH script to count the number of occurances of each word in a specified 
+# file and print the results.
 # 
-# If option -h is specified with any other option, -h takes 
-# precedence over all other options.
+# If option -h is specified with any other option, -h takes precedence over 
+# all other options.
 #
 # Usage: 
 # word_count -h
 # word_count.sh -F FILENAME
 #
-# For testing purposes, one may download a book in plain text
-# format from Project Gutenberg website using the command:
+# For testing purposes, one may download a book in plain text format from 
+# Project Gutenberg website using the command:
 #
-# wget http://www.gutenberg.org/files/44362/44362-0.txt
+#   wget http://www.gutenberg.org/files/44362/44362-0.txt
 
 
 # Function to display error message (help text)

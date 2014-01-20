@@ -1,11 +1,10 @@
 #! /bin/bash
 #
-# BASH script to list all files in a given directory
-# that are equal to or larger than a certain set size
-# (expressed in MB).
+# BASH script to list all files in a given directory that are equal to or 
+# larger than a certain set size (expressed in MB).
 # 
-# If option -h is specified with any other option, -h takes 
-# precedence over all other options.
+# If option -h is specified with any other option, -h takes precedence over 
+# all other options.
 #
 # Usage: 
 # list_file_sizes.sh -h
@@ -82,8 +81,8 @@ KILOBYTE="1024"
 MEGABYTE=`echo "$KILOBYTE * 1024" | bc`
 GIGABYTE=`echo "$MEGABYTE * 1024" | bc`
 
-# Find all files that are at least 2 MB in $LOCATION
-# and print to the screen
+# List all files that are at least 2 MB in $LOCATION using 'find', 'awk' and
+# 'sed' commands
 echo
 echo "  Location  : $LOCATION"
 echo "  Min. size : $SIZE MB"

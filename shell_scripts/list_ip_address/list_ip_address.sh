@@ -1,7 +1,6 @@
 #! /bin/bash
 #
-# BASH script to list all network interfaces and the
-# associated IP address.
+# BASH script to list all network interfaces and the associated IP address.
 # 
 # Usage: 
 # list_ip_address.sh
@@ -10,8 +9,8 @@
 # Necessary variables
 EXPECTED_ARGUMENTS=0
 
-# Check if there is any argument supplied at the command line. 
-# If yes, print an error message (help text) and exit.
+# Check if there is any argument supplied at the command line. If yes, print 
+# an error message (help text) and exit
 if [ $# -ne $EXPECTED_ARGUMENTS ]
 then
   echo

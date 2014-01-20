@@ -1,12 +1,11 @@
 #! /bin/bash
 #
-# BASH script to add a series of given numbers and print the 
-# sum to the screen. Works for integers and non-integers alike. 
-# 'getopts' does not support "long option" format 
-# (i.e., --help, --begin, --step, --end, etc.).
+# BASH script to add a series of given numbers and print the sum. Works for 
+# integers and non-integers alike. 'getopts' does not support "long option" 
+# format (i.e., --help, --begin, --step, --end, etc.).
 # 
-# If option -h is specified with any other option, -h takes 
-# precedence over all other options.
+# If option -h is specified with any other option, -h takes precedence over 
+# all other options.
 #
 # Usage: 
 # sum_numbers_getopts.sh -h
@@ -26,30 +25,27 @@ show_help() {
 }
 
 
-# The 'getopts' command is built into the BASH shell. It looks
-# a lot like 'getopt', but 'getopts' command works on the 
-# existing shell parameter variables sequentially. It processes 
-# the parameters it detects in the command line one at a time 
-# each time it’s called. When it runs out of parameters, it 
-# exits with an exit status greater than zero. This makes it 
-# suitable for using in loops to parse all of the parameters 
-# on the command line. The syntax of the 'getopts' command is:
+# The 'getopts' command is built into the BASH shell. It looks a lot like 
+# 'getopt', but 'getopts' command works on the existing shell parameter 
+# variables sequentially. It processes the parameters it detects in the 
+# command line one at a time each time it’s called. When it runs out of 
+# parameters, it exits with an exit status greater than zero. This makes it 
+# suitable for using in loops to parse all of the parameters on the command 
+# line. The syntax of the 'getopts' command is:
 #
 #   getopts optstring variable
 #
-# One should list valid option letters in the 'optstring', 
-# along with a colon if the option letter requires a parameter 
-# value. To suppress error messages, one should start the 
-# 'optstring' with a colon. The 'getopts' command places the 
-# current parameter in the variable defined in the command 
-# line ('option' in this case).
+# One should list valid option letters in the 'optstring', along with a colon 
+# if the option letter requires a parameter value. To suppress error messages, 
+# one should start the 'optstring' with a colon. The 'getopts' command places 
+# the current parameter in the variable defined in the command line ('option' 
+# in this case).
 #
-# The OPTARG environment variable contains the value to be 
-# used if an option requires a parameter value. The OPTIND 
-# environment variable contains the value of the current 
-# location within the parameter list where 'getopts' left 
-# off. This allows one to continue processing other command 
-# line parameters after finishing the options.
+# The OPTARG environment variable contains the value to be used if an option 
+# requires a parameter value. The OPTIND environment variable contains the 
+# value of the current location within the parameter list where 'getopts' 
+# left off. This allows one to continue processing other command line 
+# parameters after finishing the options.
 
 # -B, -S and -E must have parameter values
 # -h doesn't need a parameter value
@@ -103,8 +99,7 @@ do
   esac
 done
 
-# Check to make sure that BEGIN, STEP and END have 
-# appropriate values
+# Check to make sure that BEGIN, STEP and END have appropriate values
 if [ -z $BEGIN ] || [ -z $END ]
 then
   show_help
