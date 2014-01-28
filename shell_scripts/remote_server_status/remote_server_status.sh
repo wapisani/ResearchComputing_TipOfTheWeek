@@ -19,8 +19,8 @@ EXPECTED_ARGUMENTS=1
 if [ $# -ne $EXPECTED_ARGUMENTS ]
 then
   echo
-  echo "  Usage: `basename $0`"
-  echo "   e.g.: `basename $0` IP_ADDRESS"
+  echo "  Usage: `basename $0` IP_ADDRESS"
+  echo "   e.g.: `basename $0` 123.456.789.012"
   echo
   exit
 fi
@@ -37,9 +37,9 @@ PING_REQUESTS=`ping -c $PING_COUNT -q $SERVER | \
 # Count the number of pings (KNOCK_KNOCK), number of responses (WHO_IS_THERE) 
 # and create a status for the network and/or the remote server
 KNOCK_KNOCK=`echo $PING_REQUESTS | \
-        awk -F ' ' '{ print $1 }'`
+               awk -F ' ' '{ print $1 }'`
 WHO_IS_THERE=`echo $PING_REQUESTS | \
-        awk -F ' ' '{ print $4 }'`
+                awk -F ' ' '{ print $4 }'`
 
 if [ $WHO_IS_THERE -eq $KNOCK_KNOCK ]
 then
