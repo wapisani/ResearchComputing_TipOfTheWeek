@@ -12,7 +12,7 @@ Red Hat Enterprise Linux 6.x is the choice OS for work stations, while Rocks Clu
 
 These scripts, tools, utilities, procedures, etc., may very well work for you (or your institution) on your work stations, Rocks/Rocks-like and/or other linux clusters. Please note that if you decide to use them, you are doing so entirely at your very own discretion and that Michigan Technological University is not responsible for any/all damage(s) -- intellectual and/or otherwise.      
 
-Please feel free to download, edit these scripts, tools, utilities and make them dance to your heart's content. If you feel generous enough, contribute back to the repository.     
+Please feel free to download, edit these scripts, tools, utilities and make them dance to your heart's content. If you are feeling generous, contribute back to the repository.     
 
 
 
