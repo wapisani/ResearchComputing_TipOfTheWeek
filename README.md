@@ -1,4 +1,4 @@
-Tip Of The Week     
+Tip of The Week     
 ===   
 
 Disclaimer     
