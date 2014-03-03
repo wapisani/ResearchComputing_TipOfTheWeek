@@ -1,5 +1,8 @@
-Disclaimer
-===
+Tip Of The Week     
+===   
+
+Disclaimer     
+----------    
 
 The scripts, tools, utilities, procedures, etc., included in this repository were written by and have been tested at Michigan Technological University to help our researchers. These are published, often periodically, as **Tip of The Week**, at   
 
@@ -14,7 +17,8 @@ Please feel free to download, edit these scripts, tools, utilities and make them
 
 
 Author
-===
+----------    
+
 Gowtham, PhD    
 HPC Research Scientist, ITS    
 Adj. Asst. Professor, Physics/ECE     
