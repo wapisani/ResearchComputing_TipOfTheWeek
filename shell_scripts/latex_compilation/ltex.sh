@@ -24,54 +24,9 @@ fi
 # Save the filename and extract the basename (i.e., without .tex)
 export FILENAME="$1"
 export BASENAME=`echo "$FILENAME"  | awk -F '.' '{ print $1 }'`
-export EXTENSION=`echo "$FILENAME" | awk -F '.' '{ print $NF }'`
 
-# Check if file has .tex extension. If not, print an error message (help text) 
-# and exit
-if [ "$EXTENSION" != "tex" ]
-then
-  echo
-  echo "  $FILENAME does not have .tex extension."
-  echo "  Exiting."
-  echo
-  exit
-fi
-
-# Check if file exists. If not, print an error message (help text) and exit
-if [ ! -e "$FILENAME" ]
-then
-  echo
-  echo "  $FILENAME does not exist."
-  echo "  Exiting."
-  echo
-  exit
-fi
-
-# Check if file has zero size. If yes, print an error message (help text)
-# and exit
-FILE_SIZE=$(du $FILENAME | awk '{print $1}')
-if [ "$FILE_SIZE" -eq 0 ]
-then
-  echo
-  echo "  $FILENAME exists but is empty."
-  echo "  Exiting."
-  echo
-  exit
-fi
-
-# Check if file has non-zero size but has any useful information. If not, 
-# print an error message (help text) and exit
-NON_BLANK_LINES=`sed '/^ *%/d;s/%.*//' $FILENAME | sed '/^$/d' | wc -l`
-if [ "$NON_BLANK_LINES" -eq 0 ]
-then
-  echo
-  echo "  $FILENAME exists and is not empty but has no useful information."
-  echo "  Exiting."
-  echo
-  exit
-fi
-
-# Run LaTeX twice and convert DVI to PDF
+# Run LaTeX twice and convert DVI to PDF.
+# If need be, convert DVI to PS and then PS to PDF
 echo
 echo "  Running LaTeX on $FILENAME and converting to PDF"
 latex  $FILENAME &> /dev/null
