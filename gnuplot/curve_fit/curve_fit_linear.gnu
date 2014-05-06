@@ -1,7 +1,7 @@
 # curve_fit_linear.gnu
 # 
 # Gnuplot instructions to plot the data contained in 
-# curve_fit_linear.dat.
+# curve_fit.dat.
 #
 # Usage:
 # gnuplot curve_fit_linear.gnu
