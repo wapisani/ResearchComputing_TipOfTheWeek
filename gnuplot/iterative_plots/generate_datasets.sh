@@ -1,19 +1,32 @@
 #! /bin/bash
+#
+# BASH script to generate the necessary data files (dataset_i.dat) for use
+# with 'iterative_plot_datasets.gnu'.
+# 
+# Amdahl's law:
+# S = 1/((1 - P) + (P/N)) 
+# S: Speed up
+# P: Parallelizable fraction of the code
+# N: Number of processors
+#
+# Usage:
+# generate_datasets.sh
 
-BASES="5000 3000 1000 700 300"
-PROCS="1 2 4 8 16 32 64 128"
+# Parallel fraction array
+PARALLEL_FRACTION="0.25 0.50 0.75 0.80 0.85 0.90 0.95"
 
-i=1
-for base in $BASES
+j=1
+for pfrac in $PARALLEL_FRACTION
 do
-  truncate -s0 dataset_${i}.dat
-  for proc in $PROCS
+  I=16
+  i=0
+  echo "NPROC P=$pfrac" > dataset_${j}.dat
+  while [ $i -le $I ]
   do
-    measured_value=`echo "$proc * $base" | bc`
-    random_number=$(( $RANDOM % 100 ))
-    y_axis_value=`echo "$measured_value - $random_number" | bc`
-    printf "%-3d  %6d  %6d\n" "$proc" "$measured_value" "$y_axis_value"
-    printf "%-3d  %6d\n" "$proc" "$y_axis_value" >> dataset_${i}.dat
+    proc=`echo "2^$i" | bc`
+    speed_up=`echo "1/((1 - $pfrac) + ($pfrac / $proc))" | bc -l`
+    printf "%-5d  %s\n" "$proc" "$speed_up" >> dataset_${j}.dat
+    i=`expr $i + 1`
   done
-  i=`expr $i + 1`
+  j=`expr $j + 1`
 done

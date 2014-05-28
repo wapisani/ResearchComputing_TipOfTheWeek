@@ -4,15 +4,15 @@
 # gnuplot iterative_plot_datasets.gnu
 
 
-set terminal pngcairo size 1280,800 enhanced font 'Helvetica,24'
+set terminal pngcairo dashed size 1280,800 enhanced font 'Helvetica,24'
 set output "iterative_plot_datasets.png"
-set title  "Multiple data sets"
-set xlabel "x"
-set ylabel "sin(x*n)/n"
-set xrange [0.00:6.28]
-set yrange [-1.1:1.1]
+set title  "Iterative plot of multiple data sets (Amdahl's Law)"
+set xlabel "# of processors"
+set ylabel "Speed up"
+set yrange [0:21]
+set logscale x 2
+set key left top
+set key autotitle columnhead
 set grid
-set style fill transparent solid 0.25 noborder
-set sample 1000
 
-plot for [n=1:5] sin(x*n)/n notitle with filledcurves
+plot for [i=1:7] 'dataset_'.i.'.dat' using 1:2 with lines lw 1
