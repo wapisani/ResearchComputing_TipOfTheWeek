@@ -20,7 +20,7 @@ Author
 ----------    
 
 Gowtham, PhD    
-Director of Research Computing, ITS
+Director of Research Computing, ITS      
 Adj. Asst. Professor, Physics/ECE     
 Michigan Technological University    
 
