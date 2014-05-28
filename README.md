@@ -20,7 +20,7 @@ Author
 ----------    
 
 Gowtham, PhD    
-HPC Research Scientist, ITS    
+Director of Research Computing, ITS
 Adj. Asst. Professor, Physics/ECE     
 Michigan Technological University    
 
