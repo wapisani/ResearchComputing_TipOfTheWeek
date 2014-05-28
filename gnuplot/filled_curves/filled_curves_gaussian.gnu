@@ -1,15 +1,15 @@
-# filled_curves_solid.gnu
+# filled_curves_gaussian.gnu
 # 
 # Usage:
-# gnuplot filled_curves_solid.gnu
+# gnuplot filled_curves_gaussian.gnu
 
 
 set terminal postscript eps enhanced color "Helvetica" 24
-set output "filled_curves_solid.eps"
+set output "filled_curves_gaussian.eps"
 set size 2.0,2.0
 set title  "Filled curves (solid)"
 set xlabel "x"
-set ylabel "Gaussians"
+set ylabel "Gaussian"
 
 set style fill solid 1.0 noborder
 set style function filledcurves y1=0
