@@ -4,7 +4,7 @@ Research Computing
 Disclaimer     
 ----------    
 
-The scripts, tools, utilities, procedures, etc., included in this repository were written by and have been tested at Michigan Technological University to help our researchers. These are published, often periodically, as **Tip of The Week**, at   
+The scripts, tools, utilities, procedures, etc., included in this repository were written by and have been tested at Michigan Technological University to help our researchers. These are published, often periodically, as **Tip of The Week** at   
 
   http://hpc.mtu.edu/tips/    
 
