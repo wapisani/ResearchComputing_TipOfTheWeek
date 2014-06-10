@@ -1,4 +1,4 @@
-Michigan Tech Research Computing
+Research Computing
 ===   
 
 Disclaimer     
