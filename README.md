@@ -20,9 +20,10 @@ Author
 ----------    
 
 Gowtham, PhD    
-Director of Research Computing, ITS      
+Director of Research Computing, IT       
 Adj. Asst. Professor, Physics/ECE     
 Michigan Technological University    
 
 http://it.mtu.edu   
+http://hpc.mtu.edu   
 
