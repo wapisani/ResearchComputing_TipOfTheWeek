@@ -1,4 +1,4 @@
-Research Computing
+Research Computing Tips
 ===   
 
 Disclaimer     
