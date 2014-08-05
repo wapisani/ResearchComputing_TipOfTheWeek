@@ -25,5 +25,6 @@ fi
 REMEMBER="$HOME/.remember"
 SEARCH_STRING="$@"
 
-# Search through the stored notes (case insensitive search)
+# Search through the stored notes (case insensitive search) and display all
+# matching entries with time stamp
 grep -B1 -i "$SEARCH_STRING" $REMEMBER
