@@ -8,7 +8,7 @@
 #
 # Usage: 
 # list_file_by_name.sh -h
-# list_file_by_name.sh [-l LOCATION] -f PART_OF_THE_NAME
+# list_file_by_name.sh [-l LOCATION] [-f PART_OF_THE_NAME]
 
 
 # Function to display error message (help text)

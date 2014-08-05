@@ -8,7 +8,7 @@
 #
 # Usage: 
 # list_file_by_size.sh -h
-# list_file_by_size.sh [-l LOCATION] -s SIZE_IN_MB
+# list_file_by_size.sh [-l LOCATION] [-s SIZE_IN_MB]
 
 
 # Function to display error message (help text)
