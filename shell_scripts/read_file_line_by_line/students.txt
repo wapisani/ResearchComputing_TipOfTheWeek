@@ -1,0 +1,14 @@
+#
+
+Jill Sanderson|100|100|100
+George Washington|50|60|70
+Thomas Jefferson|60|70|80
+#
+Theodore Roosevelt|70|80|90
+
+Abraham Lincoln|80|90|100
+John Johnson|40|50|60
+James Johnson|30|40|50
+Jones Johnson|20|30|40
+William Johnson|10|20|30
+Raymond Johnson|0|10|20
