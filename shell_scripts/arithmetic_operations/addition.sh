@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# BASH script to add two given integers.
+# BASH script to add two given numbers.
 #
 # Usage: 
 # addition.sh NUMBER1 NUMBER2
@@ -16,19 +16,18 @@ then
   echo
   echo "  Usage: `basename $0` NUMBER1 NUMBER2"
   echo "   e.g.: `basename $0` 4 2"
+  echo "         `basename $0` -4 2.25"
   echo
   exit
 fi
-
-# Function to validate user input
-. validate_numeric.sh
 
 # Store the arguments
 A=$1
 B=$2
 
 # Validate A and B
-if ! validate_numeric "$A"
+NUMERIC_INPUT='^-?[0-9]+([.][0-9]+)?$'
+if ! [[ $A =~ $NUMERIC_INPUT ]]
 then
   echo
   echo "  NUMBER1 is invalid (contains non-numeric charcaters)"
@@ -36,7 +35,7 @@ then
   exit
 fi
 
-if ! validate_numeric "$B"
+if ! [[ $B =~ $NUMERIC_INPUT ]]
 then
   echo
   echo "  NUMBER2 is invalid (contains non-numeric charcaters)"
@@ -45,7 +44,7 @@ then
 fi
 
 # Arithmetic (addition)
-C=$((A + B))
+C=`echo "$A + $B" | bc -l`
 
 # Print to screen
 echo
