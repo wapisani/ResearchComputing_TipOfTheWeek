@@ -14,6 +14,20 @@
 # read_file_line_by_line.sh FILENAME
 
 
+# Necessary variables
+EXPECTED_ARGUMENTS=1
+
+# Check if a file is supplied at the command line. If not, print an error 
+# message (help text) and exit
+if [ $# -ne $EXPECTED_ARGUMENTS ]
+then
+  echo
+  echo "  Usage: `basename $0` FILENAME"
+  echo "   e.g.: `basename $0` students.txt"
+  echo
+  exit
+fi
+
 # Function to convert score into letter grade
 score2grade() {
 
@@ -24,12 +38,6 @@ score2grade() {
   sanitized_score=`echo "$original_score" | sed 's/[^0-9\.]//g'`
 
   # Assign a letter grade to sanitized score
-#     if [[ $sanitized_score -ge 90 ]]
-#     then
-#       echo "A"
-#     else
-#       echo "F"
-#     fi
   case $sanitized_score in
     100.00)
       echo "A"
@@ -54,20 +62,6 @@ score2grade() {
     ;;
   esac
 }
-
-# Necessary variables
-EXPECTED_ARGUMENTS=1
-
-# Check if a file is supplied at the command line. If not, print an error 
-# message (help text) and exit
-if [ $# -ne $EXPECTED_ARGUMENTS ]
-then
-  echo
-  echo "  Usage: `basename $0` FILENAME"
-  echo "   e.g.: `basename $0` students.txt"
-  echo
-  exit
-fi
 
 # Save the filename
 FILENAME="$1"
