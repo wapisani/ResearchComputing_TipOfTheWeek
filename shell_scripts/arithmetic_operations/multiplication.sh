@@ -1,9 +1,9 @@
 #! /bin/bash
 #
-# BASH script to subtract two given integers.
+# BASH script to multiply two given integers.
 #
 # Usage: 
-# subtraction.sh NUMBER1 NUMBER2
+# multiplication.sh NUMBER1 NUMBER2
 
 
 # Necessary variables
@@ -22,7 +22,6 @@ fi
 
 # Function to validate user input
 . validate_numeric.sh
-
 
 # Store the arguments
 A=$1
@@ -45,12 +44,12 @@ then
   exit
 fi
 
-# Arithmetic (subtraction)
-C=$((A - B))
+# Arithmetic (multiplication)
+C=$((A * B))
 
 # Print to screen
 echo
 echo "  NUMBER1 (A) : $A"
 echo "  NUMBER2 (B) : $B"
-echo "  C = A - B   : $C"
+echo "  C = A * B   : $C"
 echo

@@ -21,24 +21,7 @@ then
 fi
 
 # Function to validate user input
-validate_numeric() {
-
-  # User input
-  local original_string=${1}
-
-  # Strip off all non-numeric characters from original_string
-  sanitized_string=`echo "$original_string" | sed 's/[^0-9]//g'`
-
-  # Compare original_string and sanitized_string, and return a value
-  if [ "$original_string" != "$sanitized_string" ]
-  then
-    # Invalid user input
-    return 1
-  else
-    # Valid user input
-    return 0
-  fi
-}
+. validate_numeric.sh
 
 # Store the arguments
 A=$1
